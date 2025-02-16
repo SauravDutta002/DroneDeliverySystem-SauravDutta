@@ -1,0 +1,238 @@
+/* Sidebar Container */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: #0d0d0d;
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(7, 7, 7, 0.53));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0;
+  box-shadow: 4px 0px 10px rgba(64, 63, 63, 0.1);
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* For mobile view, hide sidebar initially */
+.sidebar.open {
+  transform: translateX(0); /* Show sidebar when open */
+}
+
+/* Sidebar Toggle (Hamburger Menu) */
+.sidebar-toggle {
+  display: none; /* Hide on larger screens */
+  font-size: 30px;
+  color: white;
+  background: transparent;
+  background-color: rgba(15, 15, 15, 0.459);
+  border: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 2000;
+}
+
+/* For mobile view (below 768px) - Hide sidebar by default */
+@media (max-width: 768px) {
+  .sidebar {
+    left: -250px; /* Initially hidden */
+  }
+
+  .sidebar.open {
+    transform: translateX(250px); /* Move sidebar into view when open */
+  }
+
+  .sidebar-toggle {
+    display: block; /* Show hamburger button on mobile */
+  }
+
+  /* Logo, menu, and profile should be stacked vertically in mobile view */
+  .logo, .lists, .profile {
+    flex-direction: column;
+    align-items: center; /* Center the content */
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Sidebar options should be centered */
+  .option {
+    justify-content: center; /* Center options horizontally */
+  }
+
+  .profile {
+    margin-top: 20px;
+  }
+}
+
+/* For screens larger than 768px */
+@media (min-width: 769px) {
+  .sidebar {
+    position: static; /* Make sidebar static, no need to overlap */
+    width: 250px;
+    height: auto;
+    transform: translateX(0); /* Always visible */
+  }
+
+  .sidebar-toggle {
+    display: none; /* Hide the hamburger button */
+  }
+
+  /* Logo, menu, and profile should be aligned horizontally on larger screens */
+  .logo, .lists, .profile {
+    flex-direction: row; /* Align items horizontally */
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .option {
+    justify-content: flex-start; /* Align options to the left */
+    
+  }
+
+  .profile {
+    margin-top: 0;
+  }
+}
+
+
+@media (max-width: 769px) {
+
+  .option {
+    justify-content: flex-start; /* Align options to the left */
+    padding: 20px;
+    
+  }
+
+}
+
+/* Additional styles for logo, menu, and profile */
+.drone-icon {
+  font-size: 38px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  gap: 10px;
+  letter-spacing: 1px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 40px;
+}
+
+.lists {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.option {
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  justify-content: flex-start; /* Align options to the left */
+}
+
+
+.option:hover {
+  background: white;
+  color: black;
+}
+
+.option:hover .icon {
+  color: black;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: auto;
+}
+
+.profile-icon {
+  font-size: 30px;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+
+
+.location-info {
+  margin-left: 10px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 220px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  transition: 0.3s ease-in-out;
+}
+
+.location-info:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.location-info h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.location-info p {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.location-info p:nth-child(odd) {
+  font-weight: bold;
+}
+
+.location-info p span {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Highlight "Start: True" */
+.location-info p:nth-child(5) {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.red {
+  color: red;
+}
+.red :hover{
+  color: red;
+}
+.blue {
+  color: rgb(0, 115, 255);
+}
+.drone{
+  font-size: 22px;
+}

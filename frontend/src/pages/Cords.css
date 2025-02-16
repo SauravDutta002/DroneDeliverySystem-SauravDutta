@@ -1,0 +1,149 @@
+/* Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Full-Screen Container */
+  .cords-container {
+    height: 100vh;
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  /* Title Styling */
+  .cords-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff4757;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Table Styling */
+  .cords-table {
+    width: 90%;
+    max-width: 600px;
+    border-collapse: collapse;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .cords-table th,
+  .cords-table td {
+    padding: 15px;
+    border: 1px solid #444;
+    text-align: left;
+    word-wrap: break-word;
+    white-space: nowrap;
+  }
+  
+  .cords-table th {
+    background-color: #0d0d0d;
+    color: #00a8ff;
+  }
+  
+  .cords-table td {
+    background-color: #222;
+    color: #ddd;
+  }
+  
+  /* Conditional Coloring */
+  .true-value {
+    color: #2ecc71;
+    font-weight: bold;
+  }
+  
+  .false-value {
+    color: #e74c3c;
+    font-weight: bold;
+  }
+  
+  /* Button Styling */
+  .button-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .cords-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+  }
+  
+  /* Start/Stop Button */
+  .start-btn {
+    background-color: #2ecc71;
+    color: white;
+  }
+  
+  .stop-btn {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .cords-button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Reset & Set Location Buttons */
+  .reset-btn {
+    background-color: #ff4757;
+    color: white;
+  }
+  
+  .cords-button:not(.stop-btn, .start-btn) {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .cords-table {
+      width: 100%;
+    }
+  
+    .cords-table th,
+    .cords-table td {
+      padding: 12px;
+      font-size: 14px;
+    }
+  
+    .button-container {
+      flex-direction: column;
+      gap: 8px;
+    }
+  
+    .cords-button {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cords-title {
+      font-size: 18px;
+    }
+  
+    .cords-table th,
+    .cords-table td {
+      padding: 10px;
+      font-size: 12px;
+    }
+  }
+  

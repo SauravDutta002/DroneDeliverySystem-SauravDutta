@@ -1,0 +1,192 @@
+/* Emergency-Themed Background */
+.health-page {
+  background: url("https://source.unsplash.com/1600x900/?emergency,hospital") no-repeat center center/cover;
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  /* padding: 20px; */
+}
+
+/* Glassmorphism Effect for Content */
+.content {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  /* border-radius: 15px; */
+  text-align: center;
+  color: #fff;
+  /* max-width: 500px; */
+  width: 100%;
+}
+
+/* Title */
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff4444;
+  text-shadow: 0 0 10px rgba(255, 68, 68, 1);
+  margin-bottom: 20px;
+}
+
+/* Location Coordinates */
+.coordinates {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 15px 0;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(255, 68, 68, 0.5);
+  font-size: 1.1rem;
+}
+
+/* No Location Text */
+.no-location {
+  color: #ffcc00;
+}
+
+/* Buttons Container */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Button Styles */
+button {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  text-transform: uppercase;
+}
+
+/* Get Location Button */
+.get-location-btn {
+  background: #007bff;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.get-location-btn:hover {
+  background: #0056b3;
+}
+
+/* Health Alert Button */
+.health-btn {
+  background: #ff4444;
+  color: white;
+  box-shadow: 0 0 15px rgba(255, 68, 68, 0.8);
+  animation: pulse 1.5s infinite;
+}
+
+.health-btn.cancel {
+  background: #444;
+  box-shadow: none;
+  animation: none;
+}
+
+.health-btn:hover {
+  background: #cc0000;
+}
+
+/* Pulse Animation for Emergency Alert */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 68, 68, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 68, 68, 1);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(255, 68, 68, 0.8);
+  }
+}
+
+
+/* Centered Large Emergency Icon */
+.alert-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+
+/* Centered Vibrating Emergency Icon Button */
+.alert-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  animation: vibrate 0.3s infinite alternate;
+}
+
+/* Stop vibration when alert is canceled */
+.alert-button.cancel {
+  animation: none;
+}
+
+
+
+/* Centered Large Emergency Icon */
+.alert-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+/* Centered Emergency Icon Button (Without Vibration) */
+.alert-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Stop vibration when alert is canceled */
+.alert-button.cancel {
+  animation: none;
+}
+
+/* Centered Large Emergency Icon */
+.alert-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+
+/* Centered Emergency Icon Button (With Glowing Effect) */
+.alert-button {
+  background: rgba(255, 0, 0, 0.313);
+  border: none;
+  cursor: pointer;
+  /* animation: glowing 1.5s infinite alternate; */
+  
+}
+
+/* Stop glowing when alert is canceled */
+.alert-button.cancel {
+  animation: none;
+}
+
+/* Glowing Animation */
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 68, 68, 0.8), 0 0 10px rgba(255, 68, 68, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 68, 68, 1), 0 0 20px rgba(255, 68, 68, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 68, 68, 0.8), 0 0 10px rgba(255, 68, 68, 0.6);
+  }
+}

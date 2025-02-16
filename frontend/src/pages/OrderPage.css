@@ -1,0 +1,27 @@
+.order-page {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f4f4f4;
+    min-height: 100vh;
+  }
+  
+  .order-page h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .order-page p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  
